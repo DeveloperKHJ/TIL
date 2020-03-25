@@ -6,6 +6,31 @@ Hope you enjoy :)
 
 ### Today I Learnd
 
+-   2020-03-25
+
+1. Flask-login 모듈의 loginManager는
+   '''
+   @login_manager.user_loader
+   def load_user(user_id):
+   return User.query.get(user_id)
+   '''
+   콜백을 통해 해당하는 데이터베이스의 유저를 로드해올 수 있고 HTML 템플릿에서
+   current_user 를 자동으로 사용할 수 있게 해준다.
+   current_user.is_authenticated = (True or False) 가 주로 사용 된다.
+
+2. flask OAuth 구현하기
+   -> OAuth 2.0
+   -> flask-dance
+   -> flask-OAuth
+
+3. flask-wtf의 form.hidden_tag() 는 토큰을 포함하고 있어서 CSRF 공격을 방어할 수 있게 해준다.
+   이떄 app.config['SECRET_KEY']에 SECRET_KEY가 등록되어있어야 한다.
+
+-   2020-03-23
+
+1. Flask-SQLAlchemy는 파이썬에서 가장 흔히 쓰이는 ORM이다.
+2. ORM이란 파이썬으로 직접 SQL 신택스를 사용하는것 과 같은 효과를 준다.
+
 -   2020-03-20
 
 1. python class에서 print()함수나 len()함수를 사용하고 싶을 때
